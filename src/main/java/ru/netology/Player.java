@@ -6,7 +6,7 @@ import java.util.Map;
 public class Player {
     private String name;
 
-    /** информация о том, в какуюигру сколько часов было сыграно
+    /** информация о том, в какую игру сколько часов было сыграно
     ключ - игра
     значение - суммарное количество часов игры в эту игру */
     private Map<Game, Integer> playedTime = new HashMap<>();
