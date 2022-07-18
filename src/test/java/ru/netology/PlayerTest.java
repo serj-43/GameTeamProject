@@ -124,7 +124,6 @@ public class PlayerTest {
         GameStore store = new GameStore();
         Game game1 = store.publishGame("Нетология Баттл Онлайн", "Аркады");
         Game game2 = store.publishGame("Нетология Баттл", "Аркады");
-        Game game = store.publishGame("Бутаня тест>", "Аркады");
 
         Player player = new Player("Petya");
         player.installGame(game1);
