@@ -63,8 +63,6 @@ public class Player {
         for (Game game : playedTime.keySet()) {
             if (game.getGenre().equals(genre)) {
                 sum += playedTime.get(game);
-            } else {
-                sum = 0;
             }
         }
         return sum;
@@ -78,7 +76,7 @@ public class Player {
         Game gName = null;
         int maxTime = 0;
         for (Game game : playedTime.keySet()) {
-            if (game.getGenre().equals(genre) && playedTime.get(game) >= maxTime) {
+            if (game.getGenre().equals(genre) && playedTime.get(game) > maxTime) {
                 gName = game;
                 maxTime = playedTime.get(game);
             }
