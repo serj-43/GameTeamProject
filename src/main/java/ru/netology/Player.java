@@ -63,8 +63,6 @@ public class Player {
         for (Game game : playedTime.keySet()) {
             if (game.getGenre().equals(genre)) {
                 sum += playedTime.get(game);
-            } else {
-                sum = 0;
             }
         }
         return sum;
@@ -85,4 +83,6 @@ public class Player {
         }
         return gName;
     }
+
+
 }
