@@ -15,12 +15,14 @@ public class GameStoreTest {
     }
 
     @Test
-    public void addDublicateGame() {
+    public void addDuplicateGame() {
 
         GameStore store = new GameStore();
         Game game = store.publishGame("Нетология Баттл Онлайн", "Аркады");
-        Game game2 = store.publishGame("Нетология Баттл Онлайн", "Аркады");
-        assertFalse(store.containsGame(game));
+
+        assertThrows(RuntimeException.class, () -> {
+            store.publishGame("Нетология Баттл Онлайн", "Аркады");
+        });
     }
 
     @Test
@@ -29,7 +31,9 @@ public class GameStoreTest {
         GameStore store = new GameStore();
         Game game = store.publishGame("Нетология Баттл Онлайн", "Аркады");
         Game game2 = store.publishGame("Нетология Башни", "Стратегии");
+        assertTrue(store.containsGame(game));
         assertTrue(store.containsGame(game2));
+
     }
 
     @Test
