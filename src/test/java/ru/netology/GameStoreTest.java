@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 public class GameStoreTest {
 
-    @Test
+   @Test
     public void shouldAddGame() {
 
         GameStore store = new GameStore();
